@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Lunsworth38/todo-list-app/issues"
   },
-  "homepage": "https://github.com/Lunsworth38/todo-list-app#readme"
+  "homepage": "https://github.com/Lunsworth38/todo-list-app#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
