@@ -11,17 +11,21 @@ gulp.task("default", function() {
 	console.log("gulp default");
 });
 
-gulp.task("html", function () {
+gulp.task("html", function() {
 	console.log("html stuff");
 });
 
-gulp.task("styles", function () {
+gulp.task("styles", function() {
 	return gulp.src("./app/assets/styles/styles.css")
 	.pipe(postcss([cssimport, cssvars, nested, autoprefixer]))
 	.pipe(gulp.dest("./app/temp/styles"));
 });
 
-gulp.task("watch", function () {
+gulp.task("scripts", function() {
+	return gulp.src
+})
+
+gulp.task("watch", function() {
 	browserSync.init({
 		server: {
 			baseDir: "app"
@@ -32,12 +36,16 @@ gulp.task("watch", function () {
 		browserSync.reload();
 	});
 
-	watch("./app/assets/styles/**/*.css", function () {
+	watch("./app/assets/styles/**/*.css", function() {
 		gulp.start("cssInject");
 	});
+
+	watch("./app/assets/scripts/**/*.js", function() {
+		browserSync.reload();
+	})
 });
 
-gulp.task("cssInject", ["styles"],function() {
+gulp.task("cssInject", ["styles"], function() {
 	return gulp.src("./app/temp/styles/styles.css")
 	.pipe(browserSync.stream());
 });

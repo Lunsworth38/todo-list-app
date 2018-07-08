@@ -361,11 +361,12 @@ body {
 	margin-top: 100px;
 	overflow: auto;
 	background-color: #F9F9F9;
-	width: 400px;
+	width: 800px;
 	margin-right: auto;
 	margin-left: auto;
 	text-align: center;
-	box-shadow: 0px 0px 15px 1px #888888;
+	box-shadow: 0px 0px 15px 1gulp watch
+	px #888888;
 
 }
 
@@ -382,6 +383,7 @@ body {
 
 .todo-list__input {
 		width:80%;
+		display: inline;
 		border-radius: 25px;
 		border:2px solid #006378;
 		background-color: #F9F9F9;
@@ -395,6 +397,7 @@ body {
 	}
 
 .todo-list ul {
+		display: block;
 		text-align: center;
 		list-style: none;
 		padding:0;
@@ -404,6 +407,16 @@ body {
 .todo-list li {
 		padding-top: 5px;
 		padding-bottom: 5px;
+	}
+
+.todo-list .btn-add-todo {
+		width:50px;
+		height:50px;
+		position: absolute;
+		display: inline;
+		float: right;
+		margin-left:-50px;
+		border-radius:25px;
 	}
 
 .todo-list__footer {
