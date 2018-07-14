@@ -12,7 +12,34 @@
 				<h1 class="todo-list__header__title">Todo List</h1>
 			</div>
 			<input type="text" class="todo-list__input" placeholder="Add New Todo">
-			<input type="submit" class="btn-add-todo" value="+">
+			<button id="btn-add-todo">+</button>
+
+			<div>
+			  	<button onclick="handlers.displayTodos()">Display Todos</button>
+			  	<button onclick="handlers.toggleAll()">Toggle All</button>
+			</div>
+
+			<div>
+			  	<button onclick="handlers.addTodo()">Add</button>
+			  	<input id="add-todo-text-input" type="text">
+			</div>
+
+			<div>
+			  	<button onclick="handlers.changeTodo()">Change Todo</button>
+			  	<input id="change-todo-position-input" type="number">
+			  	<input id="change-todo-text-input" type="text">
+			</div>
+
+			<div>
+				<button onclick="handlers.deleteTodo()">Delete</button>
+			  	<input id="delete-todo-position-input" type="number">
+			</div>
+
+			<div>
+			  	<button onclick="handlers.toggleCompleted()">Toggle Todo Completed</button>
+			  	<input id="toggle-completed-position-input" type="number">
+			</div>
+    
 			
 			<ul class="todo-list-ul">
 				<li>1</li>
